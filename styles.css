@@ -62,6 +62,11 @@ nav ul li a {
     z-index: 1;
 }
 
+#productos {
+    text-align: center; 
+    margin: 0 auto;
+    max-width: 800px; 
+}
 
 /* Sección Productos */
 .productos-container {
@@ -91,6 +96,15 @@ nav ul li a {
     padding: 20px;
     text-align: center;
 }
+
+.material-icons {
+    font-size: 40px;
+    color: #25d38a; /* Color de WhatsApp */
+    display: inline-block;
+    padding-right: 5px;
+}
+
+
 
 footer {
     background-color: #222;
