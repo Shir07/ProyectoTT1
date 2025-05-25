@@ -58,6 +58,13 @@ nav ul li a {
     text-align: center;
 }
 
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
     nav ul li {
