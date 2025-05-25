@@ -29,6 +29,40 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Banner de Inicio */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: url('img/banner3.webp') no-repeat center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* Fondo */
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Posición */
+.banner h2,
+.banner p {
+    position: relative;
+    z-index: 1;
+}
+
+
 /* Sección Productos */
 .productos-container {
     display: flex;
