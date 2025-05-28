@@ -8,27 +8,45 @@ body {
 
 /* Header */
 header {
-   background: linear-gradient(to right, #ff9a9e, #fad0c4); 
-    color: black; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    padding: 15px;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    display: block;
+}
+
+.titulo-tienda {
+    flex-grow: 1;
     text-align: center;
-    padding: 20px;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
 }
 
-nav ul {
-    list-style-type: none;
+.nav-menu ul {
+    list-style: none;
     padding: 0;
+    display: flex;
+    gap: 15px;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
+.nav-menu ul li a {
     text-decoration: none;
-    padding: 10px 15px;
+    color: black;
+    font-weight: bold;
 }
+
+nav ul li a:hover {
+    color: #f59015e1;
+    transition: 0.3s ease-in-out;
+}
+
 
 /* Banner de Inicio */
 .banner {
@@ -116,14 +134,67 @@ nav ul li a {
     text-align: center;
 }
 
-.material-icons {
-    font-size: 40px;
-    color: #25d38a;
-    /* Color de WhatsApp */
-    display: inline-block;
-    padding-right: 5px;
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    gap: 10px;
 }
 
+#contacto label {
+    font-weight: bold;
+}
+
+#contacto input,
+#contacto textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ca770a;
+    border-radius: 5px;
+    background-color: transparent;
+    box-sizing: border-box;
+    color: #222;
+}
+
+
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.input-container input {
+    border: none;
+    outline: none;
+    width: 100%;
+    flex: 1;
+}
+
+.contacto-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.material-icons {
+    font-size: 24px;
+    color: #25d38a;
+    /* Color del icono */
+}
+
+#contacto button:hover {
+    background: #ce9909;
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
 
 
 footer {
@@ -155,12 +226,19 @@ footer {
 @media (max-width: 600px) {
     #inicio h2 {
         font-size: 28px;
-        
+
     }
 
     #inicio p {
         font-size: 18px;
         margin-top: 0px;
-        
+
+    }
+}
+
+@media (max-width: 600px) {
+    .titulo-tienda {
+        display: none;
+        /* Para ocultar el título "Tienda de Mochis" */
     }
 }
