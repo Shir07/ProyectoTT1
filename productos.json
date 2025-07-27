@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "nombre": "PISTACHO",
+        "precio": 2.50,
+        "descripcion": "Delicioso mochi donut con glaseado y trozos de pistacho.",
+        "imagen": "img/image1.jpg"
+    },
+    {
+        "id": "2",
+        "nombre": "NUTELLA",
+        "precio": 3.00,
+        "descripcion": "Suave mochi donut cubierto con irresistible Nutella.",
+        "imagen": "img/image2.jpg"
+    },
+    {
+        "id": "3",
+        "nombre": "VAINILLA",
+        "precio": 2.00,
+        "descripcion": "Clásico mochi donut con dulce glaseado de vainilla.",
+        "imagen": "img/image3.jpg"
+    },
+    {
+        "id": "4",
+        "nombre": "RED GLASÉ",
+        "precio": 2.75,
+        "descripcion": "Mochi donut rojo vibrante con un toque de frambuesa.",
+        "imagen": "img/image4.jpg"
+    },
+    {
+        "id": "5",
+        "nombre": "FRUTILLA",
+        "precio": 2.50,
+        "descripcion": "Refrescante mochi donut con glaseado de frutilla natural.",
+        "imagen": "img/image5.jpg"
+    },
+    {
+        "id": "6",
+        "nombre": "CHISPITAS",
+        "precio": 2.25,
+        "descripcion": "Divertido mochi donut con coloridas chispitas de azúcar.",
+        "imagen": "img/image6.jpg"
+    }
+]
