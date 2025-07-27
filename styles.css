@@ -640,20 +640,52 @@ footer {
         height: 200px;
     }
 
-    .header-container {
+      .nav-menu {
+        display: none; /* Ocultar por defecto en móviles */
         flex-direction: column;
-        text-align: center;
-        gap: 10px;
+        width: 100%;
+        position: absolute;
+        top: 80px; 
+        left: 0;
+        background-color: #fff4f4; /
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        border-top: 1px solid #eee;
+    }
+
+    .nav-menu.activo {
+        display: flex; 
     }
 
     .nav-menu ul {
         flex-direction: column;
-        gap: 10px;
+        width: 100%;
+        text-align: center;
+        gap: 0; /* Eliminar el gap horizontal */
     }
 
-    nav ul li {
-        display: block;
-        margin: 10px 0;
+    .nav-menu ul li {
+        width: 100%;
+    }
+
+    .nav-menu ul li a {
+        display: block; 
+        padding: 15px 20px; 
+        border-bottom: 1px solid #eee; 
+    }
+
+    .nav-menu ul li:last-child a {
+        border-bottom: none; 
+    }
+
+    .menu-hamburguesa {
+        display: block; /
+    }
+
+    .header-container {
+        /* Para que el logo/nombre y la hamburguesa estén en la misma línea */
+        justify-content: space-between;
+        flex-wrap: nowrap; /
     }
 
     .productos-container {
