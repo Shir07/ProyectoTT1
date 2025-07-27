@@ -301,6 +301,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 5000);
     });
 
-    // Iniciar el proceso: cargar productos
+       // --- Menú de hamburguesa ---
+    const menuHamburguesa = document.getElementById('menu-hamburguesa');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = navMenu.querySelectorAll('ul li a'); // Seleccionar todos los enlaces del menú
+
+    menuHamburguesa.addEventListener('click', () => {
+        navMenu.classList.toggle('activo'); // Alternar la clase 'activo'
+    });
+
+    // Cerrar el menú de hamburguesa cuando se hace clic en un enlace
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navMenu.classList.contains('activo')) {
+                navMenu.classList.remove('activo');
+            }
+        });
+    });
+
+    // Cargar productos al iniciar
     cargarProductos();
 });
