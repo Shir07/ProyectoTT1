@@ -16,9 +16,9 @@ header {
     background-color: #fff4f4;
     padding: 20px 0;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    position: sticky; 
+    position: sticky;
     top: 0;
-    z-index: 1000; 
+    z-index: 1000;
 }
 
 .header-container {
@@ -48,7 +48,6 @@ header {
     white-space: nowrap;
 }
 
-
 .nav-menu ul {
     list-style: none;
     display: flex;
@@ -69,6 +68,22 @@ header {
     background-color: #ffe6e6;
     color: #d45a75;
 }
+
+/* Botón de hamburguesa (oculto por defecto en desktop) */
+.menu-hamburguesa {
+    display: none; /* Oculto por defecto en pantallas grandes */
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #d2232a;
+    padding: 5px;
+}
+
+.menu-hamburguesa .material-icons {
+    font-size: 1.2em; /* Ajustar el tamaño del icono de hamburguesa */
+}
+
 
 /* Banner de Inicio */
 .banner {
