@@ -7,8 +7,7 @@
     <title>Tienda de Mochi Donuts</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="img/logo.png">
-    <script src="script.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -42,42 +41,52 @@
         </section>
 
 
-
         <section id="productos">
             <h2>Nuestros Productos</h2>
             <div class="productos-container">
-                <div class="producto-card">
-                    <img src="img/image1.jpg" alt="Manga 1">
+                <div class="producto-card" data-id="1" data-nombre="PISTACHO" data-precio="2.50">
+                    <img src="img/image1.jpg" alt="Mochi Donut de Pistacho">
                     <h3>PISTACHO</h3>
-                    <p>Descripción breve.</p>
+                    <p>Delicioso mochi donut con glaseado y trozos de pistacho.</p>
+                    <p class="precio">$2.50</p>
+                    <button class="agregar-carrito">Agregar al Carrito</button>
                 </div>
-                <div class="producto-card">
-                    <img src="img/image2.jpg" alt="Manga 2">
+                <div class="producto-card" data-id="2" data-nombre="NUTELLA" data-precio="3.00">
+                    <img src="img/image2.jpg" alt="Mochi Donut de Nutella">
                     <h3>NUTELLA</h3>
-                    <p>Descripción breve.</p>
+                    <p>Suave mochi donut cubierto con irresistible Nutella.</p>
+                    <p class="precio">$3.00</p>
+                    <button class="agregar-carrito">Agregar al Carrito</button>
                 </div>
-                <div class="producto-card">
-                    <img src="img/image3.jpg" alt="Manga 2">
+                <div class="producto-card" data-id="3" data-nombre="VAINILLA" data-precio="2.00">
+                    <img src="img/image3.jpg" alt="Mochi Donut de Vainilla">
                     <h3>VAINILLA</h3>
-                    <p>Descripción breve.</p>
+                    <p>Clásico mochi donut con dulce glaseado de vainilla.</p>
+                    <p class="precio">$2.00</p>
+                    <button class="agregar-carrito">Agregar al Carrito</button>
                 </div>
-                <div class="producto-card">
-                    <img src="img/image4.jpg" alt="Manga 2">
+                <div class="producto-card" data-id="4" data-nombre="RED GLASÉ" data-precio="2.75">
+                    <img src="img/image4.jpg" alt="Mochi Donut Red Glasé">
                     <h3>RED GLASÉ</h3>
-                    <p>Descripción breve.</p>
+                    <p>Mochi donut rojo vibrante con un toque de frambuesa.</p>
+                    <p class="precio">$2.75</p>
+                    <button class="agregar-carrito">Agregar al Carrito</button>
                 </div>
-                <div class="producto-card">
-                    <img src="img/image5.jpg" alt="Manga 2">
+                <div class="producto-card" data-id="5" data-nombre="FRUTILLA" data-precio="2.50">
+                    <img src="img/image5.jpg" alt="Mochi Donut de Frutilla">
                     <h3>FRUTILLA</h3>
-                    <p>Descripción breve.</p>
+                    <p>Refrescante mochi donut con glaseado de frutilla natural.</p>
+                    <p class="precio">$2.50</p>
+                    <button class="agregar-carrito">Agregar al Carrito</button>
                 </div>
-                <div class="producto-card">
-                    <img src="img/image6.jpg" alt="Manga 2">
+                <div class="producto-card" data-id="6" data-nombre="CHISPITAS" data-precio="2.25">
+                    <img src="img/image6.jpg" alt="Mochi Donut con Chispitas">
                     <h3>CHISPITAS</h3>
-                    <p>Descripción breve.</p>
+                    <p>Divertido mochi donut con coloridas chispitas de azúcar.</p>
+                    <p class="precio">$2.25</p>
+                    <button class="agregar-carrito">Agregar al Carrito</button>
                 </div>
-                <!-- Para agregar más productos-->
-            </div>
+                </div>
         </section>
 
         <section id="contacto">
@@ -105,18 +114,35 @@
                 <div id="mensaje-exito" class="mensaje-exito">¡Mensaje enviado con éxito!</div>
                 <div id="errores" class="errores"></div>
 
-                <!-- Contenedor de errores -->
                 <div id="errores" style="color: red; margin-top: 10px;"></div>
             </form>
         </section>
-
-
 
     </main>
 
     <footer>
         <p>&copy; 2025 Tienda de Mochi Donuts - Todos los derechos reservados.</p>
     </footer>
+
+    <button class="carrito-flotante" id="abrir-carrito">
+        <span class="material-icons">shopping_cart</span>
+        <span class="contador-carrito" id="contador-carrito">0</span>
+    </button>
+
+    <div id="modal-carrito" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2>Tu Carrito de Compras</h2>
+            <div id="items-carrito">
+                <p class="carrito-vacio-mensaje">Tu carrito está vacío.</p>
+            </div>
+            <div class="resumen-carrito">
+                <p>Total: $<span id="total-carrito">0.00</span></p>
+                <button id="confirmar-pedido">Confirmar Pedido</button>
+            </div>
+            <div id="mensaje-pedido-exito" class="mensaje-exito" style="display:none;">¡Pedido confirmado con éxito! Gracias por tu compra.</div>
+        </div>
+    </div>
 
 </body>
 
