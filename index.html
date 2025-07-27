@@ -7,6 +7,7 @@
     <title>Tienda de Mochi Donuts</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="img/logo.png">
+    <script src="script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -87,7 +88,7 @@
             <p>Por cualquier consulta o sugerencia, podés completar este formulario y te responderemos a la mayor
                 brevedad posible.</p>
 
-            <form action="#" method="POST">
+            <form id="formulario-contacto" action="#" method="POST">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
 
@@ -101,6 +102,11 @@
                     required></textarea>
 
                 <button type="submit">Enviar</button>
+                <div id="mensaje-exito" class="mensaje-exito">¡Mensaje enviado con éxito!</div>
+                <div id="errores" class="errores"></div>
+
+                <!-- Contenedor de errores -->
+                <div id="errores" style="color: red; margin-top: 10px;"></div>
             </form>
         </section>
 

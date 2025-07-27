@@ -215,7 +215,7 @@ header {
 
 /* Botón */
 #contacto button {
-    background-color:#fff4f4;
+    background-color: #fff4f4;
     color: #333;
     border: none;
     font-weight: 600;
@@ -236,12 +236,47 @@ header {
     outline-offset: 2px;
 }
 
+
+.mensaje-exito {
+    display: none;
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 10px 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    animation: aparecer 0.5s ease-in-out;
+}
+
+.errores p {
+    color: #b71c1c;
+    margin: 5px 0;
+    font-weight: bold;
+    background-color: #ffebee;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 footer {
     background-color: #222;
     color: white;
     text-align: center;
     padding: 20px;
 }
+
 
 /* Responsive */
 @media (max-width: 600px) {
